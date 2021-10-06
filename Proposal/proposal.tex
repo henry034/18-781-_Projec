@@ -27,11 +27,27 @@ Thus, we are going to adapt Denoising Autoencoder (DAE) to improve x-vector for 
 We can do speech enhancement by using DAE before training the x-vector, or just apply DAE on x-vector to eliminate the channel or environment effects.
 
 \section{Dataset}
-TODO
+WSJ0
+\begin{itemize}
+\item Sample Type:	1-channel pcm compressed
+\item Sample Rate:	16000
+\item Data Source(s):	microphone speech
+\item we will use wsj0-2mix (the mixed up version of wsj0) for speaker targeting ASR
+\end{itemize}
+Switchboard-1 Release 2 (optional)
+\begin{itemize}
+\item Sample Type:	2-channel ulaw
+\item Sample Rate:	8000
+\item Data Source(s):	telephone conversations
+\item about 2,400 two-sided telephone conversations among 543 speakers (302 male, 241 female)
+\end{itemize}
+
 \section{Evaluation}
 \begin{itemize}
-    \item WER on single speaker environment
-    \item WER on multi speakers environment
+    \item WER on WJS0 without our speaker-targeting embedding (x-vector, i-vector)
+    \item WER on WJS0 with our speaker-targeting embedding
+    \item WER on WJS0-2mix without our speaker-targeting embedding
+    \item WER on WJS0-2mix with our speaker-targeting embedding
 \end{itemize}
 \section{Timeline}
 Sep. 30 - Oct. 15: Literature research, methodology clarification
