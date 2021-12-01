@@ -1,1 +1,6 @@
 .venv/
+espnet/
+Corpus/
+kaldi/
+sap-voicebox/
+tmp/
